@@ -9,7 +9,7 @@
 
 <br>
 
-<img src="./assets/skill-icons.svg" height="48" alt="Java, Spring, Vue, TypeScript, Go, Kotlin, Python and Redis">
+<img src="./assets/skill-icons.svg" height="72" alt="Java, Spring, Vue, TypeScript, Go, Kotlin, Python and Redis">
 
 <br><br>
 

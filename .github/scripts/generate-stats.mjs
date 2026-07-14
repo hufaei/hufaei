@@ -40,6 +40,17 @@ async function ownedRepositories() {
 
 const query = (value) => encodeURIComponent(value);
 
+function countOverride(name, fallback) {
+  const value = process.env[name]?.trim();
+
+  if (!value) return fallback;
+  if (!/^\d+$/.test(value)) {
+    throw new Error(`${name} must be a non-negative integer.`);
+  }
+
+  return Number(value);
+}
+
 const [repositories, commits, pullRequests, issues] = await Promise.all([
   ownedRepositories(),
   github(`/search/commits?q=${query(`author:${owner}`)}&per_page=1`),
@@ -48,7 +59,7 @@ const [repositories, commits, pullRequests, issues] = await Promise.all([
 ]);
 
 const statistics = [
-  ["COMMITS", commits.total_count],
+  ["COMMITS", countOverride("TOTAL_COMMITS", commits.total_count)],
   ["STARS", repositories.filter((repository) => !repository.fork).reduce((sum, repository) => sum + repository.stargazers_count, 0)],
   ["PULL REQUESTS", pullRequests.total_count],
   ["ISSUES", issues.total_count],
@@ -68,7 +79,7 @@ const cells = statistics
 const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="680" height="132" viewBox="0 0 680 132" role="img" aria-labelledby="title description">
   <title id="title">${owner} worldline GitHub statistics</title>
-  <desc id="description">Total public commits, stars, pull requests, and issues.</desc>
+  <desc id="description">Total commits, stars, pull requests, and issues.</desc>
   <defs>
     <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#101820"/>

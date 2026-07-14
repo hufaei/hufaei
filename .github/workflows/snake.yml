@@ -33,6 +33,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TOTAL_COMMITS: ${{ vars.TOTAL_COMMITS }}
 
+      - name: Generate AniList favorites
+        run: node .github/scripts/generate-anilist.mjs
+        env:
+          ANILIST_USERNAME: LJTLI
+
       - name: Generate contribution snake
         run: node .github/scripts/generate-snake.mjs
         env:

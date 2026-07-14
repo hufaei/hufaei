@@ -15,7 +15,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Check out profile source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Generate worldline statistics
         run: node .github/scripts/generate-stats.mjs
@@ -34,7 +34,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish worldline graphics
-        uses: crazy-max/ghaction-github-pages@v4
+        uses: crazy-max/ghaction-github-pages@v5
         with:
           build_dir: dist
           target_branch: output

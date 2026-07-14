@@ -44,11 +44,11 @@
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <clipPath id="reveal-clip">
-      <rect class="reveal" x="390" y="25" width="400" height="34"/>
+      <rect class="reveal" x="330" y="22" width="540" height="40"/>
     </clipPath>
     <style>
-      .terminal-copy { fill:#d7e3e6; font:500 16px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-      .prompt { fill:#39c5bb; font:600 16px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .terminal-copy { fill:#d7e3e6; font:500 22px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .prompt { fill:#39c5bb; font:600 20px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
       .label { fill:#72828c; font:600 10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing:2.2px; }
       .tube { fill:url(#tube-glass); stroke:#638187; stroke-opacity:.5; }
       .tube-shadow { fill:#1d252c; }
@@ -62,7 +62,7 @@
       .reveal { animation:reveal 10s steps(41, end) infinite; }
       .cursor-window { animation:cursor-window 10s linear infinite; }
       .cursor-inline { fill:#39c5bb; animation:cursor-move 10s steps(41, end) infinite, cursor-blink .72s step-end infinite; }
-      .enter { fill:#8be7df; font:600 18px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; opacity:0; animation:enter-key 10s linear infinite; }
+      .enter { fill:#8be7df; font:600 22px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; opacity:0; animation:enter-key 10s linear infinite; }
       .next-cursor { fill:#39c5bb; opacity:0; animation:next-cursor 10s linear infinite, cursor-blink .72s step-end infinite; }
       .signal-pulse { opacity:0; animation:signal 10s linear infinite; }
       .digit-0 { animation:digit-0 10s linear infinite; }
@@ -79,12 +79,12 @@
 
       @keyframes reveal {
         0%, 5% { width:0; }
-        29%, 96.5% { width:400px; }
+        29%, 96.5% { width:540px; }
         98%, 100% { width:0; }
       }
       @keyframes cursor-move {
         0%, 5% { transform:translateX(0); }
-        29%, 100% { transform:translateX(400px); }
+        29%, 100% { transform:translateX(540px); }
       }
       @keyframes cursor-window {
         0%, 31.4% { opacity:1; }
@@ -196,7 +196,7 @@
         47.7%, 100% { opacity:0; transform:translateX(-10px) scaleX(.1); }
       }
       @media (prefers-reduced-motion: reduce) {
-        .reveal { animation:none; width:400px; }
+        .reveal { animation:none; width:540px; }
         .cursor-window, .enter, .next-cursor, .signal-pulse, .lock-cyan, .lock-violet { display:none; }
         .digit, .punctuation { animation:none; opacity:.94; filter:url(#digit-glow); transform:none; }
       }
@@ -208,18 +208,18 @@
   <rect x="2" y="2" width="4" height="96" rx="2" fill="#39c5bb" opacity=".78"/>
   <path d="M16 18H1184" stroke="#9a71c7" stroke-opacity=".11"/>
 
-  <text class="prompt" x="360" y="50">&gt;</text>
+  <text class="prompt" x="296" y="53">&gt;</text>
   <g clip-path="url(#reveal-clip)">
-    <text class="terminal-copy" x="390" y="50">Every commit creates another possibility.</text>
+    <text class="terminal-copy" x="330" y="53">Every commit creates another possibility.</text>
   </g>
   <g class="cursor-window">
-    <rect class="cursor-inline" x="390" y="31" width="2.5" height="24"/>
+    <rect class="cursor-inline" x="330" y="27" width="2.5" height="31"/>
   </g>
-  <text class="enter" x="804" y="51">↵</text>
-  <rect class="next-cursor" x="390" y="69" width="14" height="2.5"/>
+  <text class="enter" x="884" y="54">↵</text>
+  <rect class="next-cursor" x="330" y="73" width="16" height="2.5"/>
 
-  <path d="M814 58V104H612Q600 104 600 116V129" fill="none" stroke="#48646b" stroke-opacity=".35" stroke-width="1.5"/>
-  <path class="signal-pulse" pathLength="1" d="M814 58V104H612Q600 104 600 116V129" fill="none" stroke="#65e6dd" stroke-width="3" stroke-linecap="round" stroke-dasharray=".075 1" stroke-dashoffset="1" filter="url(#signal-glow)"/>
+  <path d="M894 60V104H612Q600 104 600 116V129" fill="none" stroke="#48646b" stroke-opacity=".35" stroke-width="1.5"/>
+  <path class="signal-pulse" pathLength="1" d="M894 60V104H612Q600 104 600 116V129" fill="none" stroke="#65e6dd" stroke-width="3" stroke-linecap="round" stroke-dasharray=".075 1" stroke-dashoffset="1" filter="url(#signal-glow)"/>
   <circle cx="600" cy="129" r="2.5" fill="#39c5bb" opacity=".28"/>
 
   <rect x="2" y="116" width="1196" height="182" rx="12" fill="url(#cyan-ambient)"/>

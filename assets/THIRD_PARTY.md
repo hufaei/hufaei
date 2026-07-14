@@ -1,6 +1,6 @@
 # Third-party assets and services
 
-- [Simple Icons](https://github.com/simple-icons/simple-icons) — CC0-1.0. Brand vector paths are stored locally in `skill-icons.svg`; individual brand names and logos may remain subject to trademark rules.
+- [Devicon](https://github.com/devicons/devicon) — MIT License. Original-color brand SVGs are embedded locally in `skill-icons.svg`; individual brand names and logos may remain subject to trademark rules.
 - [GitHub Profile Views Counter](https://github.com/antonkomarev/github-profile-views-counter) — MIT License. README embeds its hosted counter endpoint.
 - [snk / generate-snake-animation](https://github.com/Platane/snk) — MIT-licensed generator used to render the contribution snake.
 

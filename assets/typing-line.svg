@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="76" viewBox="0 0 680 76" role="img" aria-labelledby="title description">
+  <title id="title">Every commit creates another possibility.</title>
+  <desc id="description">A terminal prompt types the sentence one character at a time.</desc>
+  <defs>
+    <clipPath id="reveal-clip">
+      <rect class="reveal" x="48" y="19" width="350" height="38"/>
+    </clipPath>
+    <style>
+      .prompt { fill:#39c5bb; font: 500 15px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .copy { fill:#c7d2d7; font: 500 14px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .reveal { animation: reveal 8s steps(41, end) infinite; }
+      .cursor { fill:#ff9e45; animation: cursor-move 8s steps(41, end) infinite, cursor-blink .8s step-end infinite; }
+      @keyframes reveal {
+        0%, 8% { width:0; }
+        48%, 92% { width:350px; }
+        93%, 100% { width:0; }
+      }
+      @keyframes cursor-move {
+        0%, 8% { transform:translateX(0); }
+        48%, 92% { transform:translateX(350px); }
+        93%, 100% { transform:translateX(0); }
+      }
+      @keyframes cursor-blink { 50% { opacity:0; } }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal { animation:none; width:350px; }
+        .cursor { display:none; }
+      }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="678" height="74" rx="9" fill="#090e13" stroke="#233139"/>
+  <path d="M2 10V66" stroke="#39c5bb" stroke-width="3"/>
+  <text class="prompt" x="22" y="44">&gt;</text>
+  <g clip-path="url(#reveal-clip)">
+    <text class="copy" x="48" y="44">Every commit creates another possibility.</text>
+  </g>
+  <rect class="cursor" x="48" y="27" width="2" height="22"/>
+</svg>

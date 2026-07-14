@@ -67,41 +67,28 @@ const statistics = [
 
 const cells = statistics
   .map(([label, value], index) => {
-    const x = 24 + index * 164;
+    const x = 85 + index * 170;
     return `
-      <g transform="translate(${x} 58)">
-        <text class="label" x="0" y="0">${label}</text>
-        <text class="value" x="0" y="36">${Number(value).toLocaleString("en-US")}</text>
+      <g>
+        <text class="value" x="${x}" y="36" text-anchor="middle">${Number(value).toLocaleString("en-US")}</text>
+        <text class="label" x="${x}" y="62" text-anchor="middle">${label}</text>
       </g>`;
   })
   .join("");
 
 const svg = `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="132" viewBox="0 0 680 132" role="img" aria-labelledby="title description">
-  <title id="title">${owner} worldline GitHub statistics</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="86" viewBox="0 0 680 86" role="img" aria-labelledby="title description">
+  <title id="title">${owner} GitHub totals</title>
   <desc id="description">Total commits, stars, pull requests, and issues.</desc>
   <defs>
-    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#101820"/>
-      <stop offset="1" stop-color="#090d12"/>
-    </linearGradient>
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.2" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
     <style>
-      .eyebrow { font: 600 10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 2.4px; fill: #667680; }
-      .label { font: 600 10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 1.2px; fill: #39c5bb; }
-      .value { font: 700 25px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .5px; fill: #ff9e45; }
+      .label { font: 600 9px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 1.2px; fill: #687680; }
+      .value { font: 700 22px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .4px; fill: #e6fffc; }
     </style>
   </defs>
-  <rect x="1" y="1" width="678" height="130" rx="12" fill="url(#panel)" stroke="#26343d"/>
-  <path d="M16 33H664" stroke="#1f2c33"/>
-  <path d="M170 49V112M334 49V112M498 49V112" stroke="#1d2a31"/>
-  <circle cx="21" cy="17" r="3" fill="#39c5bb" filter="url(#glow)"/>
-  <text class="eyebrow" x="32" y="21">WORLDLINE STATISTICS // ${owner.toUpperCase()}</text>
+  <rect x="1" y="1" width="678" height="84" rx="9" fill="#0a0f14" stroke="#233139"/>
+  <path d="M170 18V68M340 18V68M510 18V68" stroke="#26343d"/>
   ${cells}
-  <text class="eyebrow" x="658" y="119" text-anchor="end">観測中</text>
 </svg>
 `;
 

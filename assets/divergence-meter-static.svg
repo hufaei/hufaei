@@ -31,24 +31,6 @@
       .digit { fill:#ff9e45; font: 700 48px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor:middle; filter:url(#digit-glow); }
       .punctuation { fill:#ff9e45; font: 700 35px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; filter:url(#digit-glow); }
 
-      .digit { animation: warm 11s ease-out infinite both; }
-      .digit-1 { animation-delay: .12s; }
-      .digit-2 { animation-delay: .24s; }
-      .digit-3 { animation-delay: .36s; }
-      .digit-4 { animation-delay: .48s; }
-      .digit-5 { animation-delay: .60s; }
-      .digit-6 { animation-delay: .72s; }
-      @keyframes warm {
-        0%, 3% { opacity: .06; filter: blur(3px); }
-        5% { opacity: 1; filter: url(#digit-glow); }
-        7% { opacity: .24; }
-        9%, 84% { opacity: 1; }
-        85% { opacity: .68; }
-        86%, 100% { opacity: 1; filter: url(#digit-glow); }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        .digit { animation: none; opacity: 1; filter: url(#digit-glow); }
-      }
     </style>
   </defs>
   <rect x="1" y="1" width="1198" height="154" rx="12" fill="url(#panel)" stroke="#27323a"/>

@@ -7,14 +7,7 @@
 
 <br>
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="./assets/divergence-meter-static.svg">
-  <img src="./assets/divergence-meter.svg" width="100%" alt="世界線変動率 1.048596%">
-</picture>
-
-<br>
-
-<img src="./assets/skill-icons.svg" height="32" alt="Java, Spring, Vue, TypeScript, Go, Kotlin, Python and Redis"> <img src="https://komarev.com/ghpvc/?username=hufaei&label=OBSERVERS&color=39c5bb&style=flat-square" height="32" alt="Profile observers">
+<img src="./assets/skill-icons.svg" height="32" alt="Java, Spring, Vue, TypeScript, Go, Kotlin, Python and Redis">&emsp;&emsp;&emsp;&emsp;<img src="https://komarev.com/ghpvc/?username=hufaei&label=OBSERVERS&color=39c5bb&style=flat-square" height="32" alt="Profile observers">
 
 <br>
 
@@ -22,7 +15,7 @@
 
 <br>
 
-<img src="./assets/typing-line.svg" width="100%" alt="Every commit creates another possibility">
+<img src="./assets/worldline-sequence.svg" width="100%" alt="Every commit creates another possibility. Press Enter to shift the worldline to 1.048596%">
 
 <br>
 

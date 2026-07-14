@@ -1,0 +1,42 @@
+name: Generate worldline snake
+
+on:
+  schedule:
+    - cron: "39 3 * * *"
+      timezone: "Asia/Shanghai"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out profile source
+        uses: actions/checkout@v4
+
+      - name: Generate worldline statistics
+        run: node .github/scripts/generate-stats.mjs
+        env:
+          GITHUB_OWNER: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg?color_snake=%2367577a&color_dots=%23ebedf0,%23b9e7e3,%2376d5ce,%2339c5bb,%23238f89
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%2367577a&color_dots=%23182029,%2325443f,%232f716a,%2339c5bb,%2385efe7
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish worldline graphics
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          build_dir: dist
+          target_branch: output
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

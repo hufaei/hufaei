@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="86" viewBox="0 0 680 86" role="img" aria-labelledby="title description">
+  <title id="title">hufaei GitHub totals</title>
+  <desc id="description">Total commits, stars, pull requests, and issues.</desc>
+  <defs>
+    <style>
+      .label { font: 600 9px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 1.2px; fill: #687680; }
+      .value { font: 700 22px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .4px; fill: #e6fffc; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="678" height="84" rx="9" fill="#0a0f14" stroke="#233139"/>
+  <path d="M170 18V68M340 18V68M510 18V68" stroke="#26343d"/>
+  
+      <g>
+        <text class="value" x="85" y="36" text-anchor="middle">181</text>
+        <text class="label" x="85" y="62" text-anchor="middle">COMMITS</text>
+      </g>
+      <g>
+        <text class="value" x="255" y="36" text-anchor="middle">11</text>
+        <text class="label" x="255" y="62" text-anchor="middle">STARS</text>
+      </g>
+      <g>
+        <text class="value" x="425" y="36" text-anchor="middle">12</text>
+        <text class="label" x="425" y="62" text-anchor="middle">PULL REQUESTS</text>
+      </g>
+      <g>
+        <text class="value" x="595" y="36" text-anchor="middle">1</text>
+        <text class="label" x="595" y="62" text-anchor="middle">ISSUES</text>
+      </g>
+</svg>

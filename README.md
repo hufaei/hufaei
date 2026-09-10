@@ -1,8 +1,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="./assets/worldline-banner-static.png">
-  <img src="./assets/worldline-banner.gif" width="100%" alt="Worldline observation terminal for hufaei">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/worldline-banner.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/worldline-banner-light.svg">
+  <img src="./assets/worldline-banner-light.svg" width="100%" alt="Editorial worldline field note for hufaei">
 </picture>
 
 <br>
@@ -19,7 +20,11 @@
 
 <br>
 
-<img src="./assets/worldline-sequence.svg" width="100%" alt="Every commit creates another possibility. Press Enter to shift the worldline to 1.048596%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/worldline-sequence.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/worldline-sequence-light.svg">
+  <img src="./assets/worldline-sequence-light.svg" width="100%" alt="Worldline observation locked at 1.048596">
+</picture>
 
 <br>
 

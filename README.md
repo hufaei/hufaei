@@ -11,7 +11,11 @@
 
 <br>
 
-<img src="https://raw.githubusercontent.com/hufaei/hufaei/output/worldline-stats.svg" width="100%" alt="hufaei GitHub totals for commits, stars, pull requests and issues">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hufaei/hufaei/output/worldline-stats.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hufaei/hufaei/output/worldline-stats-light.svg">
+  <img src="https://raw.githubusercontent.com/hufaei/hufaei/output/worldline-stats.svg" width="100%" alt="hufaei GitHub totals for commits, stars, pull requests and issues">
+</picture>
 
 <br>
 
@@ -20,7 +24,11 @@
 <br>
 
 <a href="https://anilist.co/user/LJTLI/">
-  <img src="https://raw.githubusercontent.com/hufaei/hufaei/output/anilist-favorites.svg" width="100%" alt="LJTLI's favorite anime on AniList">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hufaei/hufaei/output/anilist-favorites.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hufaei/hufaei/output/anilist-favorites-light.svg">
+    <img src="https://raw.githubusercontent.com/hufaei/hufaei/output/anilist-favorites.svg" width="100%" alt="LJTLI's favorite anime on AniList">
+  </picture>
 </a>
 
 <br>

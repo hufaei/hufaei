@@ -2,7 +2,7 @@ name: Generate worldline snake
 
 on:
   schedule:
-    - cron: "39 3 * * *"
+    - cron: "39 3 */3 * *"
       timezone: "Asia/Shanghai"
   workflow_dispatch:
 
@@ -26,7 +26,14 @@ jobs:
       - name: Install profile generators
         run: npm ci
 
+      - name: Restore previously published graphics
+        run: |
+          git fetch --no-tags --depth=1 origin +refs/heads/output:refs/remotes/origin/output
+          mkdir -p dist
+          git archive --format=tar refs/remotes/origin/output | tar -x -C dist
+
       - name: Generate worldline statistics
+        continue-on-error: true
         run: node .github/scripts/generate-stats.mjs
         env:
           GITHUB_OWNER: ${{ github.repository_owner }}
@@ -34,11 +41,13 @@ jobs:
           TOTAL_COMMITS: ${{ vars.TOTAL_COMMITS }}
 
       - name: Generate AniList favorites
+        continue-on-error: true
         run: node .github/scripts/generate-anilist.mjs
         env:
           ANILIST_USERNAME: LJTLI
 
       - name: Generate contribution snake
+        continue-on-error: true
         run: node .github/scripts/generate-snake.mjs
         env:
           GITHUB_OWNER: ${{ github.repository_owner }}

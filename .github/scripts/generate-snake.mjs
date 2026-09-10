@@ -1,6 +1,7 @@
 import { createServer } from "node:http";
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir } from "node:fs/promises";
 import { generateSnakeAnimation } from "generate-snake-animation";
+import { replaceOutputs } from "./replace-outputs.mjs";
 
 const owner = process.env.GITHUB_OWNER?.trim();
 
@@ -101,9 +102,9 @@ try {
   );
 
   await mkdir("dist", { recursive: true });
-  await Promise.all([
-    writeFile("dist/github-contribution-grid-snake.svg", light),
-    writeFile("dist/github-contribution-grid-snake-dark.svg", dark),
+  await replaceOutputs([
+    ["dist/github-contribution-grid-snake.svg", light],
+    ["dist/github-contribution-grid-snake-dark.svg", dark],
   ]);
 } finally {
   await new Promise((resolve, reject) =>

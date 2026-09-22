@@ -12,6 +12,15 @@
 
 <br>
 
+<h2>🌐 Socials:</h2>
+
+<a href="https://www.linkedin.com/in/jingting-li-53201b382/"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&amp;logoColor=white" alt="LinkedIn"></a>
+<a href="https://www.pixiv.net/users/83457199"><img src="https://img.shields.io/badge/pixiv-%230096FA.svg?logo=pixiv&amp;logoColor=white" alt="pixiv"></a>
+<a href="mailto:lidhj9971@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?logo=gmail&amp;logoColor=white" alt="Email"></a>
+<a href="https://x.com/dhj_li"><img src="https://img.shields.io/badge/X-%23000000.svg?logo=x&amp;logoColor=white" alt="X"></a>
+
+<br>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hufaei/hufaei/output/worldline-stats.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hufaei/hufaei/output/worldline-stats-light.svg">
